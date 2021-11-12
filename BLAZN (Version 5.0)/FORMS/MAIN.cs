@@ -163,17 +163,15 @@ namespace BLAZN
             }
         }
 
-        static string name = "BLAZN"; // application name. right above the blurred text aka the secret on the licenses tab among other tabs
-        static string ownerid = "wiSjqpmNSG"; // ownerid, found in account settings. click your profile picture on top right of dashboard and then account settings.
-        static string secret = "8a36e238c7051759fadbf92fad32bf193f09a3396645d4779a38e5e3f5362698"; // app secret, the blurred text on licenses tab and other tabs
+        static string name = ""; // application name. right above the blurred text aka the secret on the licenses tab among other tabs
+        static string ownerid = ""; // ownerid, found in account settings. click your profile picture on top right of dashboard and then account settings.
+        static string secret = ""; // app secret, the blurred text on licenses tab and other tabs
         static string version = "1.0"; // leave alone unless you've changed version on website
         public static api KeyAuthApp = new api(name, ownerid, secret, version);
 
         private void MAIN_Load(object sender, EventArgs e)
         {
-            SetDNS("1.1.1.1");
-            KeyAuthApp.init();
-            login();
+            devlogin();
         }
 
         [DllImport("user32.dll")]
